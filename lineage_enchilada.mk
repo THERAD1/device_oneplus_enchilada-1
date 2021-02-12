@@ -32,11 +32,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 TARGET_INCLUDE_WIFI_EXT := true
 
-# Project-Sakura official build flags
-SAKURA_OFFICIAL := true
-SAKURA_MAINTAINER := ZahidM_Choudhry
-SAKURA_OPLAUNCHER=true
-
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_enchilada
 PRODUCT_DEVICE := enchilada
