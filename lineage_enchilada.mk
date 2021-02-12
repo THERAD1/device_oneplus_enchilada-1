@@ -21,26 +21,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from enchilada device
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
-# Inherit some common CherishOS stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+# Inherit some common Project Sakura stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Gapps
-TARGET_GAPPS_ARCH := arm64
+#TARGET_GAPPS_ARCH := arm64
+
 TARGET_INCLUDE_WIFI_EXT := true
-CHERISH_WITHGAPPS := true
 
-# Official
-CHERISH_BUILD_TYPE:= OFFICIAL
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cherish.maintainer=Zahidm
+# Project-Sakura official build flags
+SAKURA_OFFICIAL := true
+SAKURA_MAINTAINER := ZahidM_Choudhry
+SAKURA_OPLAUNCHER=true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := cherish_enchilada
+PRODUCT_NAME := lineage_enchilada
 PRODUCT_DEVICE := enchilada
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
