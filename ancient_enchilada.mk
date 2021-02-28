@@ -21,19 +21,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from enchilada device
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
-# Inherit some common Project Sakura stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some cmmon corvus stuff.
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
+scr_resolution := 1080
 
 # Gapps
-#TARGET_GAPPS_ARCH := arm64
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+ANCIENT_GAPPS := true
+
+# Ancient Official-ify
+#ANCIENT_OFFICIAL := true
+#FORCE_OTA := true
+#TARGET_FACE_UNLOCK_SUPPORTED := true
 
 TARGET_INCLUDE_WIFI_EXT := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_enchilada
+PRODUCT_NAME := ancient_enchilada
 PRODUCT_DEVICE := enchilada
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
